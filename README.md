@@ -1,23 +1,33 @@
-Grupo grupo
+# Membros: Alissa Silva Cezero - RM553954 | Melissa Barbosa de Souza - RM552535 | Nicolas Paiffer do Carmo - RM554145
 
-### Parte 1: Justificativa para o Uso da Virtualização
+# Projeto: Provisionamento de Máquina Virtual Linux na Azure
 
-#### 1) Contribuição das Máquinas Virtuais
-O uso de **Máquinas Virtuais (VMs)** oferece uma série de benefícios que contribuem para a entrega do projeto de maneira eficiente e segura:
+### Objetivo Geral
+Este projeto tem como objetivo provisionar uma máquina virtual Linux na Azure, aplicando conceitos essenciais de Cloud Computing e virtualização. A iniciativa permite criar e gerenciar ambientes de computação na nuvem, utilizando a infraestrutura confiável da Azure para fins de aprendizado e experimentação com tecnologias de infraestrutura como serviço (IaaS).
 
-- **Isolamento**: As VMs criam ambientes isolados, cada um rodando seu próprio sistema operacional, o que garante que as aplicações estejam seguras e não interfiram umas nas outras. Isso também facilita o gerenciamento de diferentes dependências, proporcionando um controle total sobre o ambiente.
-- **Escalabilidade**: Utilizando VMs em uma infraestrutura de nuvem, é possível escalar o sistema de forma flexível, adicionando ou removendo instâncias de VMs conforme necessário, sem comprometer a performance ou o custo do projeto.
-- **Flexibilidade e Portabilidade**: As VMs permitem rodar diferentes sistemas operacionais e configurações simultaneamente. Isso é útil em ambientes de desenvolvimento, testes e produção, onde a consistência e a capacidade de replicar os ambientes são essenciais.
-- **Custo-eficiência**: Através de soluções de **Infraestrutura como Serviço (IaaS)** em nuvem, o projeto só utiliza e paga pelos recursos necessários, sendo possível ajustar o poder computacional de cada VM conforme a demanda, gerando economia.
-- **Segurança**: Cada VM é completamente isolada, oferecendo uma camada extra de segurança, já que a falha em uma máquina não afeta o restante do sistema.
+## Etapa 1: Acesso e Criação da Máquina Virtual na Azure
+- Acesso ao Portal Azure
+Inicialmente, acessamos o portal da Azure, que é a plataforma de gerenciamento centralizado para todos os recursos de nuvem. A Azure oferece diversos serviços e ferramentas que facilitam a criação, configuração e manutenção de recursos virtuais.
 
-#### 2) Tipo de Virtualização Adotado
-A escolha do tipo de virtualização foi feita com base nas necessidades do projeto:
+## Provisionamento da VM
+Para criar a máquina virtual, navegamos até a seção de Máquinas Virtuais e selecionamos "Adicionar". Aqui, configuramos os parâmetros essenciais da VM:
 
-- **Máquinas Virtuais (VMs)**: Foram selecionadas para esta solução devido ao nível de controle que oferecem sobre o ambiente. As VMs permitem isolar aplicações e sistemas operacionais, proporcionando flexibilidade e segurança, especialmente em projetos que exigem ambientes configurados de maneira específica.
+- Imagem: Selecionamos o AlmaLinux OS 9 - x64 Gen2. AlmaLinux é uma distribuição Linux robusta, ideal para servidores, com alta compatibilidade com ambientes empresariais e comunidade ativa.
+- Tamanho: Escolhemos o tamanho Standard_B1s, uma configuração que oferece equilíbrio entre performance e custo-benefício para propósitos de desenvolvimento e teste.
+  
+Justificativa das Escolhas: Escolhemos essa imagem e configuração para otimizar recursos e custo, mantendo a performance ideal para tarefas de teste e aprendizado. AlmaLinux é adequado para diversos tipos de aplicativos e sistemas, enquanto a configuração Standard_B1s permite o provisionamento sem comprometer muito o orçamento.
 
-#### 3) Tipos de Serviços de Nuvem e IaaS
-O projeto irá utilizar serviços de **Infraestrutura como Serviço (IaaS)** em uma nuvem pública ou híbrida. Esses serviços oferecem flexibilidade para gerenciar e configurar VMs, com o controle necessário para administrar os sistemas operacionais, além de possibilitar a escalabilidade automática de acordo com as necessidades de processamento e armazenamento.
+## Conhecimentos Aplicados em Cloud Computing e Virtualização
+Durante este processo, utilizamos conhecimentos adquiridos sobre Cloud Computing, especialmente em plataformas como a Azure. A nuvem permite provisionar recursos conforme a demanda, o que torna a criação e o gerenciamento de infraestrutura mais flexível e escalável. Alguns dos conceitos aplicados foram:
 
-Serviços de nuvem como **Amazon EC2** (AWS), **Azure Virtual Machines** (Microsoft Azure) ou **Google Compute Engine** são boas opções para hospedar essas VMs, e permitem um gerenciamento eficiente do ciclo de vida das instâncias e integração com outros serviços de segurança e monitoramento.
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+- Infraestrutura como Serviço (IaaS): A criação de uma VM é um exemplo de IaaS, onde configuramos recursos fundamentais (computação, armazenamento, rede) para gerenciar nossos próprios ambientes de trabalho na nuvem.
+- Elasticidade e Escalabilidade: Usando a Azure, temos a opção de aumentar ou diminuir os recursos alocados à VM conforme a necessidade, garantindo eficiência de custo e disponibilidade.
+- Virtualização: A criação de uma VM se baseia na virtualização, que possibilita a execução de sistemas operacionais independentes em um ambiente isolado, otimizando o uso do hardware subjacente da Azure.
+## Documentação do Processo
+Para garantir que o conhecimento adquirido seja replicável, criamos uma documentação detalhada de cada etapa do processo. Este documento inclui:
+
+- Capturas de Tela: Incluímos imagens de cada fase da criação da VM, como a seleção do sistema operacional e a configuração do hardware.
+- Estrutura Organizacional: Organizamos o material em uma sequência de etapas claras e concisas para que futuras implementações possam seguir um padrão.
+- Registro Final: Para encerrar o projeto, documentamos a finalização da VM com uma captura de tela da mesma em operação.
+ ## Conclusão: Deleção e Limpeza dos Recursos
+Como boa prática de gerenciamento na nuvem, removemos a VM e o grupo de recursos ao término do projeto. Este processo evita custos extras e libera o ambiente na Azure para novos testes. A deleção é acompanhada de uma captura de tela ou logs que comprovam a remoção completa dos recursos.
